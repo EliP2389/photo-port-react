@@ -117,7 +117,7 @@ const PhotoList = ({ category }) => {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie'
     }
   ]);
-  // We're going through each photo in the photos array, trying to find every photo that matches the category that was selected by the user
+
   const currentPhotos = photos.filter(photo => photo.category === category);
 
   return (
@@ -125,7 +125,7 @@ const PhotoList = ({ category }) => {
       <div className="flex-row">
         {currentPhotos.map((image, i) => (
           <img
-            src={require(`../../assets/small/${category}/${i}.jpg`)}
+            src={require(`../../assets/small/${category}/${i}.jpg`).default}
             alt={image.name}
             className="img-thumbnail mx-1"
             key={image.name}
